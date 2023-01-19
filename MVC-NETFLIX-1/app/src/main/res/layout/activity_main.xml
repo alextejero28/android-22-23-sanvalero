@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/campoemail"
+        android:id="@+id/edtUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -46,18 +46,18 @@
         android:id="@+id/passwordtitle"
         android:layout_width="99dp"
         android:layout_height="29dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="28dp"
         android:text="Password:"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/campopassword"
+        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campoemail"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUser"
+        app:layout_constraintVertical_bias="0.333" />
 
     <EditText
-        android:id="@+id/campopassword"
+        android:id="@+id/edtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -67,20 +67,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campoemail"
+        app:layout_constraintTop_toBottomOf="@+id/edtUser"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/loginbtn"
+        android:id="@+id/enviarbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="188dp"
-        android:text="Login"
+        android:text="Enviar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campopassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
