@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/eti1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Componentes de Seleccion"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eti1">
+
+
+        <RadioButton
+            android:id="@+id/Radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcion1"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+        <RadioButton
+            android:id="@+id/Radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Opcion2"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="90dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:onClick="onclick"
+        android:text="Validar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <ToggleButton
+        android:id="@+id/tgBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onclick"
+        android:textOn="Activo"
+        android:textOff="Inactivo"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="367dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opcion    "
+        android:onClick="onclick"
+        />
+
+    <TextView
+        android:id="@+id/etiSeleccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado:"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="443dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
