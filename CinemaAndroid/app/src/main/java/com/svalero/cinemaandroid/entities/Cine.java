@@ -1,26 +1,32 @@
 package com.svalero.cinemaandroid.entities;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Cine {
-    private final int idCine;
+
+    @SerializedName("idCine")
+    private int idCine;
+    @SerializedName("nombre")
+    private String nombre;
+    @SerializedName("direccion")
     private String direccion;
+    @SerializedName("capacidad")
     private int capacidad;
-    private static int nextIdCine = 0;
 
-    public Cine(int idCine, String direccion, int capacidad) {
-        this.idCine = idCine;
-        this.direccion = direccion;
-        this.capacidad = capacidad;
-    }
-
-    public Cine(String direccion, int capacidad) {
-        this.idCine = nextIdCine;
-        this.direccion = direccion;
-        this.capacidad = capacidad;
-        nextIdCine++;
+    public String toString() {
+        return "Cine{" +
+                "nombre ='"+ nombre + '\'' +
+                ",direccion='"+ direccion + '\'' +
+                ",capacidad='"+ capacidad + '\'' +
+                '}';
     }
 
     public int getIdCine() {
         return idCine;
+    }
+
+    public void setIdCine(int idCine) {
+        this.idCine = idCine;
     }
 
     public String getDireccion() {
@@ -39,11 +45,11 @@ public class Cine {
         this.capacidad = capacidad;
     }
 
-    public static int getNextIdCine() {
-        return nextIdCine;
+    public String getNombre() {
+        return nombre;
     }
 
-    public static void setNextIdCine(int nextIdCine) {
-        Cine.nextIdCine = nextIdCine;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
