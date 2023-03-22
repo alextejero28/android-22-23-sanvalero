@@ -44,6 +44,7 @@ public class LstTopPeliculasAdapter extends RecyclerView.Adapter<LstTopPeliculas
         holder.butacasLibre.setText(String.valueOf(peli.getButacasLibre()));
         holder.butacasOcupadas.setText(String.valueOf(peli.getButacasOcupadas()));
         holder.duracion.setText(String.valueOf(peli.getDuracion()));
+        holder.rating.setText(String.valueOf(peli.getRating()));
     }
 
     @Override
@@ -64,6 +65,7 @@ public class LstTopPeliculasAdapter extends RecyclerView.Adapter<LstTopPeliculas
         private TextView butacasLibre;
         private TextView butacasOcupadas;
         private TextView duracion;
+        private TextView rating;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -79,6 +81,7 @@ public class LstTopPeliculasAdapter extends RecyclerView.Adapter<LstTopPeliculas
             //butacasLibre = itemView.findViewById(R.id.butacasLibre);
             //butacasOcupadas = itemView.findViewById(R.id.butacasOcupadas);
             duracion = itemView.findViewById(R.id.duracion);
+            rating = itemView.findViewById(R.id.rating);
 
         }
     }

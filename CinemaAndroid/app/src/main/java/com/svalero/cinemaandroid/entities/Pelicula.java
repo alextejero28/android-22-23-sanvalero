@@ -25,6 +25,8 @@ public class Pelicula {
     private int butacasOcupadas;
     @SerializedName("duracion")
     private int duracion;
+    @SerializedName("rating")
+    private Double rating;
 
     public String toString() {
         return "Pelicula{" +
@@ -38,6 +40,7 @@ public class Pelicula {
                 ", butacasLibre" + butacasLibre + '\'' +
                 ", butacasOcupadas" + butacasOcupadas + '\'' +
                 ", duracion" + duracion + '\'' +
+                ", rating" + rating + '\'' +
                 '}';
 
     }
@@ -129,5 +132,13 @@ public class Pelicula {
 
     public void setEdadRecomendada(int edadRecomendada) {
         this.edadRecomendada = edadRecomendada;
+    }
+
+    public Double getRating() {
+        return rating;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
     }
 }
