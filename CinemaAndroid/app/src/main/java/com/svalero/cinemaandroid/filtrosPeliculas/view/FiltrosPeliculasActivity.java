@@ -11,7 +11,12 @@ import com.svalero.cinemaandroid.R;
 import com.svalero.cinemaandroid.entities.Pelicula;
 import com.svalero.cinemaandroid.filtrosPeliculas.FiltrosPeliculasContract;
 import com.svalero.cinemaandroid.filtrosPeliculas.presenter.FiltrosPeliculasPresenter;
-import com.svalero.cinemaandroid.lstTopPeliculas.view.LstTopPeliculasAdapter;
+
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
 
 import java.util.ArrayList;
 
@@ -30,6 +35,13 @@ public class FiltrosPeliculasActivity extends AppCompatActivity implements Filtr
     }
     public void initComponents(){
         recyclerView = (RecyclerView) findViewById(R.id.recycler1);
+        Spinner spinnerCategorias=findViewById(R.id.categoriaSpinner);
+
+        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.categorias, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        spinnerCategorias.setAdapter(adapter);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
     };
     public void initPresenter(){ FiltrosPeliculasPresenter = new FiltrosPeliculasPresenter(this) ; }

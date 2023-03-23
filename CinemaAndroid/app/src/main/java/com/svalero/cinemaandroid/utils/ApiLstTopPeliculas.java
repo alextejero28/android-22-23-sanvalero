@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiLstTopPeliculas {
     public  static  final  String BASE_URL =
-            "http://192.168.56.1:8080/CinemaNetbeans/webresources/";
+            "http://192.168.1.135:8080/CinemaNetbeans/webresources/";
 
     private  static Retrofit retrofit = null;
 

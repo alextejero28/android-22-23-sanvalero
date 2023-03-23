@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent screenChanger = new Intent(getBaseContext(),
-                        LstTopPeliculasActivity.class
+                        MainActivity2.class
                 );
                 startActivity(screenChanger);
             }

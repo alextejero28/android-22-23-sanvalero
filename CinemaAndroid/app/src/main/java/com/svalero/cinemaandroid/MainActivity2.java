@@ -38,7 +38,6 @@ public class MainActivity2 extends AppCompatActivity {
                     // Iniciar la actividad principal
                     Intent intent = new Intent(getBaseContext(), MenuActivity.class);
                     startActivity(intent);
-                    finish();
                 } else {
                     // Mostrar un mensaje de error si las credenciales no son válidas
                     Toast.makeText(getBaseContext(), "Credenciales incorrectas", Toast.LENGTH_SHORT).show();

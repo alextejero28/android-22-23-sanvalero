@@ -5,9 +5,7 @@
  */
 package API;
 
-import dao.CineDAO;
 import dao.PeliculaDAO;
-import entidad.Cine;
 import entidad.Pelicula;
 import java.util.ArrayList;
 import javax.ws.rs.core.Context;
