@@ -5,8 +5,8 @@
  */
 package API;
 
-import dao.PeliculaDAO;
-import entidad.Pelicula;
+import dao.UsuarioDAO;
+import entidad.Usuario;
 import java.util.ArrayList;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -22,33 +22,32 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Alex
  */
-@Path("lstTopPeliculas")
-public class LstTopPeliculasResource {
+@Path("lstUsuarios")
+public class LstUsuariosResource {
 
     @Context
     private UriInfo context;
 
     /**
-     * Creates a new instance of LstTopPeliculasResource
+     * Creates a new instance of LstUsuariosResource
      */
-    public LstTopPeliculasResource() {
+    public LstUsuariosResource() {
     }
 
     /**
-     * Retrieves representation of an instance of API.LstTopPeliculasResource
+     * Retrieves representation of an instance of API.LstUsuariosResource
      * @return an instance of java.lang.String
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
-        //TODO return proper representation object
-        PeliculaDAO peliDAO = new PeliculaDAO();
-        ArrayList<Pelicula> lstPeliculas = peliDAO.findAllTop(null);
-        return Pelicula.fromArrayListToJson(lstPeliculas);
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        ArrayList<Usuario> lstUsuarios = usuarioDAO.findAll(null);
+        return Usuario.fromArrayListToJson(lstUsuarios);
     }
 
     /**
-     * PUT method for updating or creating an instance of LstTopPeliculasResource
+     * PUT method for updating or creating an instance of LstUsuariosResource
      * @param content representation for the resource
      */
     @PUT

@@ -29,7 +29,10 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(API.FiltrosPeliculasResource.class);
+        resources.add(API.HistoricoPeliculasResource.class);
         resources.add(API.LstTopPeliculasResource.class);
+        resources.add(API.LstUsuariosResource.class);
     }
     
 }

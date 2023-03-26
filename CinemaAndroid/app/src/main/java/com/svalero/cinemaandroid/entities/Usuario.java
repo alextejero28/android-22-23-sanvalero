@@ -23,6 +23,11 @@ public class Usuario {
                 '}';
     }
 
+    public Usuario(String correo, String contrasena){
+        this.correo = correo;
+        this.contrasena = contrasena;
+    }
+
     public int getIdUsuario() {
         return idUsuario;
     }

@@ -12,7 +12,7 @@
         android:theme="@style/Theme.CinemaAndroid"
         tools:targetApi="31"
         android:usesCleartextTraffic="true"
-
+        android:enableOnBackInvokedCallback="true"
         >
 
         <activity

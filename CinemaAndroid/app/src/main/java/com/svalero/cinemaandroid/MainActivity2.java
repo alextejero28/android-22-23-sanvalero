@@ -48,8 +48,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     // Método para validar las credenciales del usuario
     private boolean validateCredentials(String email, String password) {
-        // Aquí iría el código para verificar las credenciales del usuario en una base de datos o en otro lugar
-        // Por ahora, simplemente comprobamos si el correo electrónico y la contraseña no están vacíos
+
         return !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password);
     }
 }

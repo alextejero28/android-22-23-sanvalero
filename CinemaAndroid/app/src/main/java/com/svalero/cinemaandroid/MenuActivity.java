@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.svalero.cinemaandroid.comprarEntradas.view.ComprarEntradasActivity;
+import com.svalero.cinemaandroid.filtrosPeliculas.view.FiltrosPeliculasActivity;
 import com.svalero.cinemaandroid.lstTopPeliculas.view.LstTopPeliculasActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -25,15 +27,15 @@ public class MenuActivity extends AppCompatActivity {
                 break;
 
             case R.id.filtros:
-                crearIntent = LstTopPeliculasActivity.class;
+                crearIntent = FiltrosPeliculasActivity.class;
                 break;
 
             case R.id.comprarEntradas:
-                crearIntent = LstTopPeliculasActivity.class;
+                crearIntent = ComprarEntradasActivity.class;
                 break;
 
             case R.id.historicoPeliculas:
-                crearIntent = LstTopPeliculasActivity.class;
+                //crearIntent = LstTopPeliculasActivity.class;
                 break;
 
 

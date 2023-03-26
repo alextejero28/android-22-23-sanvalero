@@ -3,13 +3,13 @@ package com.svalero.cinemaandroid.utils;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ApiLstTopPeliculas {
+public class ApiClient {
     public  static  final  String BASE_URL =
-            "http://192.168.1.135:8080/CinemaNetbeans/webresources/";
+            "http://192.168.1.28:8080/CinemaNetbeans/webresources/";
 
     private  static Retrofit retrofit = null;
 
-    public static Retrofit getPeliculas() {
+    public static Retrofit getClient() {
         if(retrofit == null){
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
