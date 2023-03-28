@@ -23,7 +23,6 @@ public class LstTopPeliculasModel implements LstTopPeliculasContract.Model {
             @Override
             public void onResponse(Call<ArrayList<Pelicula>> call, Response<ArrayList<Pelicula>> response) {
                 ArrayList<Pelicula> lstTopPeliculasRespuesta = response.body();
-
                 onLstTopPeliculasListener.onSuccess(lstTopPeliculasRespuesta);
             }
 

@@ -31,16 +31,16 @@ public class Pelicula {
     public String toString() {
         return "Pelicula{" +
                 "titulo='" + titulo + '\'' +
-                ", sinopsis" + sinopsis + '\'' +
-                ", categoria" + categoria + '\'' +
-                ", caracteristicas" + caracteristicas + '\'' +
-                ", trailer" + trailer + '\'' +
-                ", edadRecomendada" + edadRecomendada + '\'' +
-                ", historicoEntradas" + historicoEntradas + '\'' +
-                ", butacasLibre" + butacasLibre + '\'' +
-                ", butacasOcupadas" + butacasOcupadas + '\'' +
-                ", duracion" + duracion + '\'' +
-                ", rating" + rating + '\'' +
+                ", sinopsis=" + sinopsis + '\'' +
+                ", categoria=" + categoria + '\'' +
+                ", caracteristicas=" + caracteristicas + '\'' +
+                ", trailer=" + trailer + '\'' +
+                ", edadRecomendada=" + edadRecomendada + '\'' +
+                ", historicoEntradas=" + historicoEntradas + '\'' +
+                ", butacasLibre=" + butacasLibre + '\'' +
+                ", butacasOcupadas=" + butacasOcupadas + '\'' +
+                ", duracion=" + duracion + '\'' +
+                ", rating=" + rating + '\'' +
                 '}';
 
     }

@@ -1,5 +1,7 @@
 package com.svalero.cinemaandroid.comprarEntradas.view;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -26,6 +28,8 @@ public class ComprarEntradasActivity extends AppCompatActivity implements Compra
         initComponents();
         initPresenter();
         initData();
+
+
 
     }
     public void initComponents(){

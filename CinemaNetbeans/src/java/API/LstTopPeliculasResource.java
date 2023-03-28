@@ -44,6 +44,7 @@ public class LstTopPeliculasResource {
         //TODO return proper representation object
         PeliculaDAO peliDAO = new PeliculaDAO();
         ArrayList<Pelicula> lstPeliculas = peliDAO.findAllTop(null);
+        System.out.println(lstPeliculas.get(0).toString());
         return Pelicula.fromArrayListToJson(lstPeliculas);
     }
 

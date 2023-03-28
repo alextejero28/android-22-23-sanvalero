@@ -35,7 +35,9 @@ public class MenuActivity extends AppCompatActivity {
                 break;
 
             case R.id.historicoPeliculas:
-                //crearIntent = LstTopPeliculasActivity.class;
+                MailActivity mailActivity = new MailActivity();
+                mailActivity.sendEmail();
+                crearIntent = MenuActivity.class;
                 break;
 
 

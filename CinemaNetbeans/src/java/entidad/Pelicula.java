@@ -147,23 +147,30 @@ public class Pelicula {
         String resp = "[";
         for (Pelicula peli : lstPeliculas) {
             resp += "{"
-                    + "\"IDPELICULA\" :\"" + peli.getIdPelicula() + "\", "
-                    + "\"TITULO\" :\"" + peli.getTitulo() + "\", "
-                    + "\"SINOPSIS\" : \"" + peli.getSinopsis() + "\","
-                    + "\"CATEGORIA\" : \"" + peli.getCategoria() + "\","
-                    + "\"CARACTERISTICAS\" : \"" + peli.getCaracteristicas() + "\","
-                    + "\"TRAILER\" : \"" + peli.getTrailer() + "\","
-                    + "\"EDADRECOMENDADA\" : \"" + peli.getEdadRecomendada() + "\","
-                    + "\"HISTORICOENTRADAS\" : \"" + peli.getHistoricoEntradas() + "\","
-                    + "\"BUTACASLIBRE\" : \"" + peli.getButacasLibre() + "\","
-                    + "\"BUTACASOCUPADAS\" : \"" + peli.getButacasOcupadas() + "\","
-                    + "\"DURACION\" : \"" + peli.getDuracion() + "\","
-                    + "\"RATING\" : \"" + peli.getRating() + "\"}";
+                    + "\"idPelicula\" :\"" + peli.getIdPelicula() + "\", "
+                    + "\"titulo\" :\"" + peli.getTitulo() + "\", "
+                    + "\"sinopsis\" : \"" + peli.getSinopsis() + "\","
+                    + "\"categoria\" : \"" + peli.getCategoria() + "\","
+                    + "\"caracteristicas\" : \"" + peli.getCaracteristicas() + "\","
+                    + "\"trailer\" : \"" + peli.getTrailer() + "\","
+                    + "\"edadRecomendada\" : \"" + peli.getEdadRecomendada() + "\","
+                    + "\"historicoEntradas\" : \"" + peli.getHistoricoEntradas() + "\","
+                    + "\"butacasLibre\" : \"" + peli.getButacasLibre() + "\","
+                    + "\"butacasOcupadas\" : \"" + peli.getButacasOcupadas() + "\","
+                    + "\"duracion\" : \"" + peli.getDuracion() + "\","
+                    + "\"rating\" : \"" + peli.getRating() + "\"}";
             resp += ",";
         }
         resp = resp.substring(0, resp.length() - 1);
         resp += "]";
         return resp;
     }
+
+    @Override
+    public String toString() {
+        return "Pelicula{" + "idPelicula=" + idPelicula + ", titulo=" + titulo + ", sinopsis=" + sinopsis + ", categoria=" + categoria + ", caracteristicas=" + caracteristicas + ", trailer=" + trailer + ", edadRecomendada=" + edadRecomendada + ", historicoEntradas=" + historicoEntradas + ", butacasLibre=" + butacasLibre + ", butacasOcupadas=" + butacasOcupadas + ", duracion=" + duracion + ", rating=" + rating + '}';
+    }
+    
+    
   
 }

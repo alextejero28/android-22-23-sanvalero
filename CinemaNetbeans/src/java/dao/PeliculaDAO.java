@@ -22,6 +22,7 @@ public class PeliculaDAO {
     private SQLTools miMotor = null;
     private static final String SELECT_TOP_PELICULAS ="SELECT * FROM pelicula where 1=1 ORDER BY rating DESC";
     private static final String SELECT_HISTORICO_PELICULAS ="SELECT * FROM pelicula where 1=1 ORDER BY historicoEntradas DESC";
+    private static final String SELECT_FILTROS_PELICULAS = "SELECT * FROM pelicula where ";
 
     public PeliculaDAO() {
         this.miMotor = new MotorMySQL();

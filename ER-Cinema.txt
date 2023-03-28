@@ -35,7 +35,7 @@ CONSTRAINT PK_usuario PRIMARY KEY (idUsuario)
 
 CREATE TABLE entrada (
 	idEntrada INT(4),
-	descripcion VARCHAR(40),
+	descripcion VARCHAR(100),
 	horario VARCHAR(5),
 	precio DECIMAL(4,2),
 	idUsuario INT(4),
@@ -72,7 +72,7 @@ INSERT INTO pelicula (idPelicula, titulo, sinopsis, categoria, caracteristicas, 
 (11, 'Forrest Gump', 'Un hombre simple con un corazón puro viaja a través de la historia estadounidense, con encuentros memorables con figuras influyentes y eventos históricos.', 'Comedia dramática', 'Director: Robert Zemeckis; Estrellas: Tom Hanks, Robin Wright, Gary Sinise', 'https://www.youtube.com/watch?v=8dcYw4OwCA0', 12,570, 200, 0, 142, 8),
 (12, 'El Club de la Pelea', 'Un hombre aburrido y descontento descubre un nuevo sentido de propósito en la violencia organizada.', 'Drama', 'Director: David Fincher; Protagonistas: Brad Pitt, Edward Norton, Helena Bonham Carter', 'https://www.youtube.com/watch?v=_XgQA9Ab0Gw', 18,450, 220, 30, 139, 5.4),
 (13, 'Pulp Fiction', 'La vida de dos mafiosos, un boxeador, un gánster y la esposa de un gánster se entrelazan en una serie de historias que van desde lo absurdo hasta lo peligroso.', 'Crimen', 'Director: Quentin Tarantino; Reparto: John Travolta, Uma Thurman, Samuel L. Jackson', 'https://www.youtube.com/watch?v=s7EdQ4FqbhY', 18,1050, 220, 30, 154, 1),
-(14, 'El gran Lebowski', 'Jeff Lebowski, conocido como "El Nota", se ve envuelto en una trama hilarante de intriga y engaño después de ser confundido con otro hombre con el mismo nombre.', 'Comedia', 'Director: Joel Coen; Reparto: Jeff Bridges, John Goodman, Julianne Moore', 'https://www.youtube.com/watch?v=cd-go0oBF4Y', 16,1400, 190, 10, 117, 2.3),
+(14, 'El gran Lebowski', 'Jeff Lebowski, conocido como El Nota, se ve envuelto en una trama hilarante de intriga y engaño después de ser confundido con otro hombre con el mismo nombre.', 'Comedia', 'Director: Joel Coen; Reparto: Jeff Bridges, John Goodman, Julianne Moore', 'https://www.youtube.com/watch?v=cd-go0oBF4Y', 16,1400, 190, 10, 117, 2.3),
 (15, 'El lobo de Wall Street', 'Un corredor de bolsa de Nueva York se niega a cooperar en un caso de fraude de valores, lo que lo lleva a la ruina.', 'Drama', 'Director: Martin Scorsese; Reparto: Leonardo DiCaprio, Jonah Hill, Margot Robbie', 'https://www.youtube.com/watch?v=iszwuX1AK6A', 18,15, 180, 20, 180, 3.3),
 (16, 'Blade Runner 2049', 'Un joven blade runner descubre un secreto enterrado hace mucho tiempo que lo lleva a rastrear al antiguo blade runner Rick Deckard, quien ha estado desaparecido durante 30 años.', 'Ciencia ficción', 'Director: Denis Villeneuve; Reparto: Ryan Gosling, Harrison Ford, Ana de Armas', 'https://www.youtube.com/watch?v=haXvp8M9Cog', 16,240, 150, 50, 163, 6.6),
 (17, 'El renacido', 'Un cazador de pieles de la década de 1820 lucha por sobrevivir después de ser atacado por un oso y dejado por muerto por miembros de su propio equipo de caza.', 'Aventuras', 'Director: Alejandro G. Iñárritu; Reparto: Leonardo DiCaprio, Tom Hardy, Domhnall Gleeson', 'https://www.youtube.com/watch?v=QRfj1VCg16Y', 18,800, 180, 20, 157, 7.7),
