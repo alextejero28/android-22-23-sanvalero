@@ -53,5 +53,6 @@ public class LstUsuariosResource {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public void putJson(String content) {
+        
     }
 }

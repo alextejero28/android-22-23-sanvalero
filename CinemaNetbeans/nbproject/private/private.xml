@@ -3,22 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/API/ApplicationConfig.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/API/LstTopPeliculasResource.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/entidad/Cine.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/dao/ContenerDAO.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/motores/MotorMySQL.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/dao/PeliculaDAO.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/API/HistoricoPeliculasResource.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/entidad/Entrada.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/entidad/Contener.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/dao/EntradaDAO.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/entidad/Pelicula.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/dao/CineDAO.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/API/LstUsuariosResource.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/dao/UsuarioDAO.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/API/FiltrosPeliculasResource.java</file>
-            <file>file:/C:/Users/Alex/Desktop/android-22-23-sanvalero/CinemaNetbeans/src/java/entidad/Usuario.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/entidad/Cine.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/API/HistoricoPeliculasResource.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/dao/UsuarioDAO.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/API/FiltrosPeliculasResource.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/API/LstTopPeliculasResource.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/dao/PeliculaDAO.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/API/LstUsuariosResource.java</file>
+            <file>file:/D:/android-22-23-sanvalero/CinemaNetbeans/src/java/entidad/Pelicula.java</file>
         </group>
     </open-files>
 </project-private>
