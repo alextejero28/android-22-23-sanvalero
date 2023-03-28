@@ -22,7 +22,7 @@ public class PeliculaDAO {
     private SQLTools miMotor = null;
     private static final String SELECT_TOP_PELICULAS ="SELECT * FROM pelicula where 1=1 ORDER BY rating DESC";
     private static final String SELECT_HISTORICO_PELICULAS ="SELECT * FROM pelicula where 1=1 ORDER BY historicoEntradas DESC";
-    private static final String SELECT_FILTROS_PELICULAS = "SELECT * FROM pelicula where ";
+    private static final String SELECT_FILTROS_PELICULAS = "SELECT * FROM pelicula where 1=1";
 
     public PeliculaDAO() {
         this.miMotor = new MotorMySQL();
@@ -65,14 +65,27 @@ public class PeliculaDAO {
         return lstPeliculas;
     }
      
-     public ArrayList<Pelicula> findAllFiltros(Pelicula bean) {
-        String sql_filtro = "";
+     public ArrayList<Pelicula> findAllFiltros(String categoria, String cine, String edad, String palabra) {
+         String sql_filtro = "";
+         if (!"".equals(categoria)) {
+             sql_filtro += " AND categoria = '" + categoria + "'";
+         }
+         if (!"".equals(edad)){
+             int edadRecomendada = Integer.parseInt(edad);
+             sql_filtro += " AND edadRecomendada = " + edadRecomendada;
+         }
+         if (!"".equals(palabra)){
+             sql_filtro += " AND titulo LIKE '%" + palabra + "%'"; 
+         }
+         if (!"".equals(cine)){
+             sql_filtro += " AND idPelicula IN (SELECT idPelicula FROM contener WHERE idCine IN (SELECT idCine FROM cine WHERE nombre = '" + cine + "'))";
+         }
         String sql_final = "";
         ArrayList<Pelicula> lstPeliculas = null;
         try {
             this.miMotor.connect();
            
-            sql_final = SELECT_TOP_PELICULAS + sql_filtro;
+            sql_final = SELECT_FILTROS_PELICULAS + sql_filtro;
             
             ResultSet resultset = this.miMotor.executeQuery(sql_final);
 

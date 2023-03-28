@@ -18,8 +18,8 @@ public class FiltrosPeliculasPresenter implements FiltrosPeliculasContract.Prese
     }
 
     @Override
-    public void FiltrosPeliculas(Pelicula pelicula) {
-        filtrosPeliculasModel.FiltrosPeliculasWS(null, new FiltrosPeliculasContract.Model.OnFiltrosPeliculasListener() {
+    public void FiltrosPeliculas(String categoria, String cine, String edad, String palabra) {
+        filtrosPeliculasModel.FiltrosPeliculasWS(categoria, cine, edad, palabra, new FiltrosPeliculasContract.Model.OnFiltrosPeliculasListener() {
             @Override
             public void onSuccess(ArrayList<Pelicula> lstfiltrospeliculas) {
                 if (lstfiltrospeliculas != null && lstfiltrospeliculas.size() > 0){

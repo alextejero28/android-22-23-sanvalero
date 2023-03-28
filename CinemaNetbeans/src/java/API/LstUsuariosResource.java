@@ -15,6 +15,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -22,7 +23,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Alex
  */
-@Path("lstUsuarios")
+@Path("login/{correo}/{contrasena}")
 public class LstUsuariosResource {
 
     @Context
@@ -36,13 +37,15 @@ public class LstUsuariosResource {
 
     /**
      * Retrieves representation of an instance of API.LstUsuariosResource
+     * @param correo
+     * @param contrasena
      * @return an instance of java.lang.String
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String getJson() {
+    public String getJson(@PathParam("correo") String correo, @PathParam("contrasena") String contrasena) {
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        ArrayList<Usuario> lstUsuarios = usuarioDAO.findAll(null);
+        ArrayList<Usuario> lstUsuarios = usuarioDAO.login(correo, contrasena);
         return Usuario.fromArrayListToJson(lstUsuarios);
     }
 

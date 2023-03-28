@@ -29,7 +29,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity2"
+            android:name=".LoginActivity"
             android:exported="true">
 
             <meta-data
@@ -45,6 +45,20 @@
         </activity>
         <activity
             android:name=".lstTopPeliculas.view.LstTopPeliculasActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".historicoPeliculas.view.HistoricoPeliculasActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".filtrosPeliculas.view.FiltrosPeliculasActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

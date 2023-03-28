@@ -6,8 +6,6 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.svalero.cinemaandroid.lstTopPeliculas.view.LstTopPeliculasActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent screenChanger = new Intent(getBaseContext(),
-                        MainActivity2.class
+                        LoginActivity.class
                 );
                 startActivity(screenChanger);
             }

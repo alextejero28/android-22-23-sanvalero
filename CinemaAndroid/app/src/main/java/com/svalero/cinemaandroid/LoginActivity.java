@@ -2,7 +2,7 @@ package com.svalero.cinemaandroid;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,7 +10,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+import com.svalero.cinemaandroid.entities.Usuario;
+import com.svalero.cinemaandroid.utils.ApiClient;
+import com.svalero.cinemaandroid.utils.ApiInterface;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class LoginActivity extends AppCompatActivity {
 
     private EditText email;
     private EditText password;
@@ -47,8 +57,23 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     // Método para validar las credenciales del usuario
-    private boolean validateCredentials(String email, String password) {
+    private boolean validateCredentials(String correo, String contrasena) {
+        final boolean[] isValid = new boolean[1];
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+        Call<ArrayList<Usuario>> call = apiService.login(correo, contrasena);
+        call.enqueue(new Callback<ArrayList<Usuario>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Usuario>> call, Response<ArrayList<Usuario>> response) {
+                ArrayList<Usuario> lstFiltrosPeliculasRespuesta = response.body();
 
-        return !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password);
+                isValid[0] = !lstFiltrosPeliculasRespuesta.isEmpty();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Usuario>> call, Throwable t) {
+                isValid[0] = false;
+            }
+        });
+        return isValid[0];
     }
 }

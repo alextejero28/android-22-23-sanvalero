@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.svalero.cinemaandroid.R;
@@ -32,18 +33,19 @@ public class HistoricoPeliculasAdapter extends RecyclerView.Adapter<HistoricoPel
     @Override
     public void onBindViewHolder(HistoricoPeliculasAdapter.ViewHolder holder, int position) {
         Pelicula peli = lstpeliculas.get(position);
-        holder.Id_Pelicula.setText(String.valueOf(peli.getIdPelicula()));
+        //holder.Id_Pelicula.setText(String.valueOf(peli.getIdPelicula()));
         holder.titulo.setText(String.valueOf(peli.getTitulo()));
         holder.sinopsis.setText(String.valueOf(peli.getSinopsis()));
         holder.categoria.setText(String.valueOf(peli.getCategoria()));
-        holder.caracteristicas.setText(String.valueOf(peli.getCaracteristicas()));
-        holder.trailer.setText(String.valueOf(peli.getTrailer()));
-        holder.edadRecomendada.setText(String.valueOf(peli.getEdadRecomendada()));
-        holder.historicoEntradas.setText(String.valueOf(peli.getHistoricoEntradas()));
-        holder.butacasLibre.setText(String.valueOf(peli.getButacasLibre()));
-        holder.butacasOcupadas.setText(String.valueOf(peli.getButacasOcupadas()));
-        holder.duracion.setText(String.valueOf(peli.getDuracion()));
+        //holder.caracteristicas.setText(String.valueOf(peli.getCaracteristicas()));
+        //holder.trailer.setText(String.valueOf(peli.getTrailer()));
+        holder.edadRecomendada.setText(String.valueOf("+ " + peli.getEdadRecomendada()));
+        //holder.historicoEntradas.setText(String.valueOf(peli.getHistoricoEntradas()));
+        //holder.butacasLibre.setText(String.valueOf(peli.getButacasLibre()));
+        //holder.butacasOcupadas.setText(String.valueOf(peli.getButacasOcupadas()));
+        holder.duracion.setText(String.valueOf(peli.getDuracion() + " min"));
         holder.rating.setText(String.valueOf(peli.getRating()));
+        holder.star.setImageResource(R.drawable.star);
     }
 
     @Override
@@ -65,6 +67,7 @@ public class HistoricoPeliculasAdapter extends RecyclerView.Adapter<HistoricoPel
         private TextView butacasOcupadas;
         private TextView duracion;
         private TextView rating;
+        private ImageView star;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -81,7 +84,7 @@ public class HistoricoPeliculasAdapter extends RecyclerView.Adapter<HistoricoPel
             //butacasOcupadas = itemView.findViewById(R.id.butacasOcupadas);
             duracion = itemView.findViewById(R.id.duracion);
             rating = itemView.findViewById(R.id.rating);
-
+            star = (ImageView) itemView.findViewById(R.id.star);
         }
     }
 

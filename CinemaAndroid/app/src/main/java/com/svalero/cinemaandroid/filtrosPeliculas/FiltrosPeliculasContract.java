@@ -11,14 +11,14 @@ public interface FiltrosPeliculasContract {
         void failureFiltrosPeliculas(String err);
     }
     public interface  Presenter{
-        void FiltrosPeliculas(Pelicula pelicula);
+        void FiltrosPeliculas(String categoria, String cine, String edad, String palabra);
     }
     public interface  Model{
         interface  OnFiltrosPeliculasListener{
             void  onSuccess(ArrayList<Pelicula> lstfiltrospeliculas);
             void  onFailure(String error);
         }
-        void FiltrosPeliculasWS(Pelicula pelicula, FiltrosPeliculasContract.Model.OnFiltrosPeliculasListener onFiltrosPeliculasListener);
+        void FiltrosPeliculasWS(String categoria, String cine, String edad, String palabra, FiltrosPeliculasContract.Model.OnFiltrosPeliculasListener onFiltrosPeliculasListener);
 
     }
 }

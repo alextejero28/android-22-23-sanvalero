@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.svalero.cinemaandroid.comprarEntradas.view.ComprarEntradasActivity;
 import com.svalero.cinemaandroid.filtrosPeliculas.view.FiltrosPeliculasActivity;
+import com.svalero.cinemaandroid.historicoPeliculas.view.HistoricoPeliculasActivity;
 import com.svalero.cinemaandroid.lstTopPeliculas.view.LstTopPeliculasActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -35,9 +36,7 @@ public class MenuActivity extends AppCompatActivity {
                 break;
 
             case R.id.historicoPeliculas:
-                MailActivity mailActivity = new MailActivity();
-                mailActivity.sendEmail();
-                crearIntent = MenuActivity.class;
+                crearIntent = HistoricoPeliculasActivity.class;
                 break;
 
 

@@ -25,8 +25,8 @@ public class UsuarioDAO {
     public UsuarioDAO() {
         this.miMotor = new MotorMySQL();
     }
-     public ArrayList<Usuario> findAll(Usuario bean) {
-        String sql_filtro = "";
+     public ArrayList<Usuario> login(String correo, String contrasena) {
+        String sql_filtro = " AND correo = '" + correo + "' AND contrasena = '" + contrasena + "'";
         String sql_final = "";
         ArrayList<Usuario> lstUsuarios = null;
         try {
