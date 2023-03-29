@@ -67,17 +67,17 @@ public class PeliculaDAO {
      
      public ArrayList<Pelicula> findAllFiltros(String categoria, String cine, String edad, String palabra) {
          String sql_filtro = "";
-         if (!"".equals(categoria)) {
+         if (!"c".equals(categoria)) {
              sql_filtro += " AND categoria = '" + categoria + "'";
          }
-         if (!"".equals(edad)){
+         if (!"-1".equals(edad)){
              int edadRecomendada = Integer.parseInt(edad);
-             sql_filtro += " AND edadRecomendada = " + edadRecomendada;
+             sql_filtro += " AND edadRecomendada >= " + edadRecomendada;
          }
-         if (!"".equals(palabra)){
+         if (!"0".equals(palabra)){
              sql_filtro += " AND titulo LIKE '%" + palabra + "%'"; 
          }
-         if (!"".equals(cine)){
+         if (!"c".equals(cine)){
              sql_filtro += " AND idPelicula IN (SELECT idPelicula FROM contener WHERE idCine IN (SELECT idCine FROM cine WHERE nombre = '" + cine + "'))";
          }
         String sql_final = "";

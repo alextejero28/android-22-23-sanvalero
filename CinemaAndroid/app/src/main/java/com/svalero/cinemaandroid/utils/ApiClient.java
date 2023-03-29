@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     public  static  final  String BASE_URL =
-            "http://192.168.1.135:8080/CinemaNetbeans/webresources/";
+            "http://192.168.104.64:8080/CinemaNetbeans/webresources/";
 
     private  static Retrofit retrofit = null;
 

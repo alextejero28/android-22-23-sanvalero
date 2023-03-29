@@ -2,6 +2,7 @@ package com.svalero.cinemaandroid.comprarEntradas.model;
 
 import com.svalero.cinemaandroid.comprarEntradas.ComprarEntradasContract;
 import com.svalero.cinemaandroid.entities.Entrada;
+import com.svalero.cinemaandroid.entities.Pelicula;
 import com.svalero.cinemaandroid.utils.ApiClient;
 import com.svalero.cinemaandroid.utils.ApiInterface;
 
@@ -13,19 +14,19 @@ import retrofit2.Response;
 
 public class ComprarEntradasModel implements ComprarEntradasContract.Model {
     @Override
-    public void ComprarEntradasWS(Entrada entrada, OnComprarEntradasListener onComprarEntradasListener) {
+    public void ComprarEntradasWS(String cine, OnComprarEntradasListener onComprarEntradasListener) {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
-        Call<ArrayList<Entrada>> call = apiService.comprarEntradas();
-        call.enqueue(new Callback<ArrayList<Entrada>>() {
+        Call<ArrayList<Pelicula>> call = apiService.comprarEntradas(cine);
+        call.enqueue(new Callback<ArrayList<Pelicula>>() {
             @Override
-            public void onResponse(Call<ArrayList<Entrada>> call, Response<ArrayList<Entrada>> response) {
-                ArrayList<Entrada> ComprarEntradasRespuesta = response.body();
+            public void onResponse(Call<ArrayList<Pelicula>> call, Response<ArrayList<Pelicula>> response) {
+                ArrayList<Pelicula> ComprarEntradasRespuesta = response.body();
                 onComprarEntradasListener.onSuccess(ComprarEntradasRespuesta);
             }
 
             @Override
-            public void onFailure(Call<ArrayList<Entrada>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<Pelicula>> call, Throwable t) {
                 onComprarEntradasListener.onFailure(t.getMessage());
             }
         });

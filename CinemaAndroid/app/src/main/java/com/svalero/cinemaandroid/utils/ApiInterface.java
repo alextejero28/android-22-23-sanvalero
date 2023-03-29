@@ -33,8 +33,10 @@ public interface ApiInterface {
             @Path("palabra") String palabra
     );
 
-    @PUT("comprarEntradas")
-    Call<ArrayList<Entrada>> comprarEntradas();
+    @GET("comprarEntradas/{cine}")
+    Call<ArrayList<Pelicula>> comprarEntradas(
+            @Path("cine") String cine
+    );
 
     @GET("historicoPeliculas")
     Call<ArrayList<Pelicula>> getHistoricoPeliculas();

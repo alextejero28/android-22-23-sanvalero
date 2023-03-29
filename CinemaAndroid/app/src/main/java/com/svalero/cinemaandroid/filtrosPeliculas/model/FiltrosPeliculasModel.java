@@ -18,6 +18,18 @@ public class FiltrosPeliculasModel implements FiltrosPeliculasContract.Model {
     public void FiltrosPeliculasWS(String categoria, String cine, String edad, String palabra, OnFiltrosPeliculasListener onFiltrosPeliculasListener) {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
+        if (categoria.equals("")){
+            categoria = "c";
+        }
+        if (cine.equals("")){
+            cine = "c";
+        }
+        if (edad.equals("")){
+            edad = "-1";
+        }
+        if (palabra.equals("")){
+            palabra = "0";
+        }
         Call<ArrayList<Pelicula>> call = apiService.getFiltrosPeliculas(categoria, cine, edad, palabra);
         call.enqueue(new Callback<ArrayList<Pelicula>>() {
             @Override
